@@ -214,8 +214,24 @@ hr {
 <p>Load libraries</p>
 
 <pre><code class="r">library(ezknitr)
-library(knitr)
-library(devtools)
+</code></pre>
+
+<pre><code>## Warning: package &#39;ezknitr&#39; was built under R version 3.4.4
+</code></pre>
+
+<pre><code class="r">library(knitr)
+</code></pre>
+
+<pre><code>## Warning: package &#39;knitr&#39; was built under R version 3.4.4
+</code></pre>
+
+<pre><code class="r">library(devtools)
+</code></pre>
+
+<pre><code>## Warning: package &#39;devtools&#39; was built under R version 3.4.4
+</code></pre>
+
+<pre><code>## Warning: package &#39;usethis&#39; was built under R version 3.4.4
 </code></pre>
 
 <p>Clear environment and set seed</p>
@@ -854,48 +870,60 @@ save(new_data, file = &quot;data/processed_data/all_studies_data.Rdata&quot;)
 <pre><code class="r">devtools::session_info()
 </code></pre>
 
-<pre><code>## Session info -------------------------------------------------------------
-</code></pre>
-
-<pre><code>##  setting  value                       
-##  version  R version 3.3.2 (2016-10-31)
-##  system   x86_64, darwin13.4.0        
-##  ui       RStudio (1.0.143)           
+<pre><code>## - Session info ----------------------------------------------------------
+##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  os       Windows &gt;= 8 x64            
+##  system   x86_64, mingw32             
+##  ui       RStudio                     
 ##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  tz       &lt;NA&gt;                        
-##  date     2019-02-22
-</code></pre>
-
-<pre><code>## Packages -----------------------------------------------------------------
-</code></pre>
-
-<pre><code>##  package     * version date       source        
-##  base        * 3.3.2   2016-10-31 local         
-##  datasets    * 3.3.2   2016-10-31 local         
-##  devtools    * 1.13.3  2017-08-02 CRAN (R 3.3.2)
-##  digest        0.6.12  2017-01-27 CRAN (R 3.3.2)
-##  evaluate      0.10.1  2017-06-24 CRAN (R 3.3.2)
-##  ezknitr     * 0.6     2016-09-16 CRAN (R 3.3.0)
-##  graphics    * 3.3.2   2016-10-31 local         
-##  grDevices   * 3.3.2   2016-10-31 local         
-##  highr         0.6     2016-05-09 CRAN (R 3.3.0)
-##  knitr       * 1.17    2017-08-10 CRAN (R 3.3.2)
-##  magrittr      1.5     2014-11-22 CRAN (R 3.3.0)
-##  markdown      0.8     2017-04-20 CRAN (R 3.3.2)
-##  memoise       1.1.0   2017-04-21 CRAN (R 3.3.2)
-##  methods     * 3.3.2   2016-10-31 local         
-##  mime          0.5     2016-07-07 CRAN (R 3.3.0)
-##  R.methodsS3   1.7.1   2016-02-16 CRAN (R 3.3.0)
-##  R.oo          1.21.0  2016-11-01 CRAN (R 3.3.0)
-##  R.utils       2.5.0   2016-11-07 CRAN (R 3.3.0)
-##  rstudioapi    0.7     2017-09-07 CRAN (R 3.3.2)
-##  stats       * 3.3.2   2016-10-31 local         
-##  stringi       1.1.5   2017-04-07 CRAN (R 3.3.2)
-##  stringr       1.2.0   2017-02-18 CRAN (R 3.3.2)
-##  tools         3.3.2   2016-10-31 local         
-##  utils       * 3.3.2   2016-10-31 local         
-##  withr         2.0.0   2017-07-28 CRAN (R 3.3.2)
+##  collate  English_United States.1252  
+##  ctype    English_United States.1252  
+##  tz       America/Chicago             
+##  date     2019-06-03                  
+## 
+## - Packages --------------------------------------------------------------
+##  package     * version date       lib source        
+##  assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.4.4)
+##  backports     1.1.2   2017-12-13 [1] CRAN (R 3.4.4)
+##  callr         3.1.0   2018-12-10 [1] CRAN (R 3.4.4)
+##  cli           1.0.1   2018-09-25 [1] CRAN (R 3.4.4)
+##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.4.4)
+##  desc          1.2.0   2018-05-01 [1] CRAN (R 3.4.4)
+##  devtools    * 2.0.1   2018-10-26 [1] CRAN (R 3.4.4)
+##  digest        0.6.18  2018-10-10 [1] CRAN (R 3.4.4)
+##  evaluate      0.12    2018-10-09 [1] CRAN (R 3.4.4)
+##  ezknitr     * 0.6     2016-09-16 [1] CRAN (R 3.4.4)
+##  fs            1.2.6   2018-08-23 [1] CRAN (R 3.4.4)
+##  glue          1.3.0   2018-07-17 [1] CRAN (R 3.4.4)
+##  highr         0.7     2018-06-09 [1] CRAN (R 3.4.4)
+##  knitr       * 1.21    2018-12-10 [1] CRAN (R 3.4.4)
+##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.4.3)
+##  memoise       1.1.0   2017-04-21 [1] CRAN (R 3.4.4)
+##  pkgbuild      1.0.2   2018-10-16 [1] CRAN (R 3.4.4)
+##  pkgload       1.0.2   2018-10-29 [1] CRAN (R 3.4.4)
+##  prettyunits   1.0.2   2015-07-13 [1] CRAN (R 3.4.4)
+##  processx      3.2.1   2018-12-05 [1] CRAN (R 3.4.4)
+##  ps            1.2.1   2018-11-06 [1] CRAN (R 3.4.4)
+##  R.methodsS3   1.7.1   2016-02-16 [1] CRAN (R 3.4.1)
+##  R.oo          1.22.0  2018-04-22 [1] CRAN (R 3.4.4)
+##  R.utils       2.7.0   2018-08-27 [1] CRAN (R 3.4.4)
+##  R6            2.3.0   2018-10-04 [1] CRAN (R 3.4.4)
+##  Rcpp          1.0.0   2018-11-07 [1] CRAN (R 3.4.4)
+##  remotes       2.0.2   2018-10-30 [1] CRAN (R 3.4.4)
+##  rlang         0.3.0.1 2018-10-25 [1] CRAN (R 3.4.4)
+##  rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.4.4)
+##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.4.4)
+##  stringi       1.2.4   2018-07-20 [1] CRAN (R 3.4.4)
+##  stringr       1.3.1   2018-05-10 [1] CRAN (R 3.4.4)
+##  testthat      2.0.1   2018-10-13 [1] CRAN (R 3.4.4)
+##  usethis     * 1.4.0   2018-08-14 [1] CRAN (R 3.4.4)
+##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.4.4)
+##  xfun          0.4     2018-10-23 [1] CRAN (R 3.4.4)
+##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.4.4)
+## 
+## [1] C:/Users/aarchmil/Documents/R/win-library/3.4
+## [2] C:/Program Files/R/R-3.4.3/library
 </code></pre>
 
 <p>spun with:
