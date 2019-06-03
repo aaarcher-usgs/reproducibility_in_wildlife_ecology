@@ -10,7 +10,7 @@
 #' 
 #' Load libraries
 #' 
-#+ library, warnings = "hide"
+#+ library, warnings = FALSE
 library(ezknitr)
 library(knitr)
 library(devtools)
