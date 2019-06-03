@@ -1,6 +1,7 @@
 #' # Figure 1 Data
 #' 
-#' Description: Data on overall fate of all 80 studies for Figure 1 of paper
+#' Description: Data on overall fate of all 80 studies for Figure 1 of paper. Figure
+#' 1 was made with Adobe Illustrator using the following data.
 #' 
 #' Coder name(s): Althea ArchMiller
 #' 
@@ -10,7 +11,7 @@
 #' 
 #' Load libraries
 #' 
-#+ library, warnings = "hide"
+#+ library, warnings = FALSE
 library(ezknitr)
 library(knitr)
 library(devtools)
