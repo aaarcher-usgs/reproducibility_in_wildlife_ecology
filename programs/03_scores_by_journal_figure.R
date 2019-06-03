@@ -1,6 +1,6 @@
 #' # Figure 2
 #' 
-#' Description: Scores by journal
+#' Description: Scores by journal, which is included in Figure 2 in manuscript.
 #' 
 #' Coder name(s): Althea ArchMiller
 #' 
@@ -10,7 +10,7 @@
 #' 
 #' Load libraries
 #' 
-#+ library, warnings = "hide"
+#+ library, warnings = FALSE
 library(ezknitr)
 library(knitr)
 library(devtools)
