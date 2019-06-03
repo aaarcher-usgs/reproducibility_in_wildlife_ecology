@@ -10,7 +10,7 @@
 #' 
 #' Load libraries
 #' 
-#+ library, warnings = "hide"
+#+ library, warnings = FALSE
 library(ezknitr)
 library(knitr)
 library(devtools)
@@ -31,8 +31,8 @@ str(raw_data)
 #' _____________________________________________________________________________
 #' ## Fill in missing data
 #' 
-#' ### The question "Was this study reviewed?" was added after a few survey
-#'  responses were filled in, so I will update those records with "TRUE"
+#' **The question "Was this study reviewed?" was added after a few survey
+#'  responses were filled in, so I will update those records with "TRUE"**
 #' 
 #' View responses to this column
 table(raw_data$Was.this.paper.reviewed..)
@@ -47,7 +47,7 @@ table(raw_data$Was.this.paper.reviewed..)
 #' _____________________________________________________________________________
 #' ## Why weren't studies reviewed?
 #' 
-#' ### Create and fill out a new column for "Why not reviewed"
+#' **Create and fill out a new column for "Why not reviewed"**
 raw_data$Why.not.reviewed <- NA
 
 #' Fill in with "NA-Was reviewed" for all reviewed studies:
@@ -94,25 +94,26 @@ new_data$Study.ID..e.g...wsb002.or.jwm040.[new_data$Was.this.paper.reviewed.. ==
 #' - wsb037: proprietary/confidential data, *noteably, author states the study is not reproducible*
 #' - jwm036: not enough time to prepare data, *noteably, author states the study is not reproducible*
 #' 
-new_data$Why.not.reviewed <- ifelse(test = 
-                                      new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm003" |
-                                      new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb039" |
-                                      new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb037" |
-                                      new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb001",
-                                    yes = "Author Declined: Proprietary/confidential data", 
-                                    no = ifelse(test = 
-                                                  new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm005" |
-                                                  new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm031",
-                                                yes = "Author Declined: No reason given",
-                                                no = ifelse(test = 
-                                                              new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm011" |
-                                                              new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb005" |
-                                                              new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm036",
-                                                            yes = "Author Declined: Not enough time",
-                                                            no = ifelse(test = new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm016",
-                                                                        yes = "Author Declined: Data saved for future article",
-                                                                        no = new_data$Why.not.reviewed))
-                                    ))
+new_data$Why.not.reviewed <- 
+  ifelse(test = 
+           new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm003" |
+           new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb039" |
+           new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb037" |
+           new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb001",
+         yes = "Author Declined: Proprietary/confidential data", 
+         no = ifelse(test = 
+                       new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm005" |
+                       new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm031",
+                     yes = "Author Declined: No reason given",
+                     no = ifelse(test = 
+                                   new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm011" |
+                                   new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb005" |
+                                   new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm036",
+                                 yes = "Author Declined: Not enough time",
+                                 no = ifelse(test = new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm016",
+                                             yes = "Author Declined: Data saved for future article",
+                                             no = new_data$Why.not.reviewed))
+         ))
 
 #' ### Track down reasons for "False, for other reasons not stated above"
 #' 
@@ -127,18 +128,19 @@ new_data$Study.ID..e.g...wsb002.or.jwm040.[new_data$Was.this.paper.reviewed.. ==
 #' - wsb027: author wanted to participate, but did not send data in time
 #' - jwm038: unable to find email for author, incorrectly coded: Should have been "No correspondence"
 #' 
-new_data$Why.not.reviewed <- ifelse(test = 
-                                      new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb020", 
-                                    yes = "Author Declined: Proprietary/confidential data",
-                                    no = ifelse(test = 
-                                                  new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb029" |
-                                                  new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm038",
-                                                yes = "No correspondence",
-                                                no = ifelse(test = 
-                                                              new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb007" |
-                                                              new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb027",
-                                                            yes = "Author wanted to participate, but did not send data",
-                                                            no = new_data$Why.not.reviewed)))
+new_data$Why.not.reviewed <- 
+  ifelse(test = 
+           new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb020", 
+         yes = "Author Declined: Proprietary/confidential data",
+         no = ifelse(test = 
+                       new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb029" |
+                       new_data$Study.ID..e.g...wsb002.or.jwm040. == "jwm038",
+                     yes = "No correspondence",
+                     no = ifelse(test = 
+                                   new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb007" |
+                                   new_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb027",
+                                 yes = "Author wanted to participate, but did not send data",
+                                 no = new_data$Why.not.reviewed)))
 
 #' Look at results
 table(new_data$Why.not.reviewed)
@@ -171,13 +173,16 @@ summary(reviewed_data$Were.the.study.s.figures.reproduced..)
 summary(reviewed_data$Were.the.numbers.in.the.study.s.tables.and.or.results.text.quantitatively.reproduced..)
 summary(reviewed_data$Were.the.study.s.conclusions.reproduced..)
 #' For one of these studies with NAs, there were no figures, so I will replace with a "99"
-reviewed_data$Were.the.study.s.figures.reproduced..[reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb018"] <- 99
+reviewed_data$Were.the.study.s.figures.reproduced..[
+  reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb018"] <- 99
 #' For another of these studies, the study was completely unreproducible, so the 
 #' reviewer erroneously didn't answer these questions. These should have been "1s"
-reviewed_data$Were.the.study.s.figures.reproduced..[reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb008"] <- 1
+reviewed_data$Were.the.study.s.figures.reproduced..[
+  reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb008"] <- 1
 reviewed_data$Were.the.numbers.in.the.study.s.tables.and.or.results.text.quantitatively.reproduced..[
   reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb008"] <- 1
-reviewed_data$Were.the.study.s.conclusions.reproduced..[reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb008"] <- 1
+reviewed_data$Were.the.study.s.conclusions.reproduced..[
+  reviewed_data$Study.ID..e.g...wsb002.or.jwm040. == "wsb008"] <- 1
 
 
 #' Summarize information by reviewed study with a for-loop
@@ -206,9 +211,9 @@ for(ss in 1:length(study_names)){
   }
 }
 
-#' ### Fix anomolies listed above:
+#' ## Fix anomolies listed above:
 #' 
-#' 1. Data was readily available 
+#' ### 1. Data was readily available 
 #' 
 #' Data was sent by author so "was data readily available" should be "False"
 #' 
@@ -232,7 +237,7 @@ reviewed_data$Data.readily.available. <- ifelse(
     no = reviewed_data$Data.readily.available.
   )
 )
-#' 2. Was code available?
+#' ### 2. Was code available?
 #' 
 #' For jwm022 and wsb008, code actually was available
 #' 
@@ -248,7 +253,7 @@ reviewed_data$Code.available <- ifelse(
     yes = "Not applicable (e.g., not analyzed with code-based software)",
     no = reviewed_data$Code.available
   ))
-#' 3. Analysis was entirely code based
+#' ### 3. Analysis was entirely code based
 #' 
 #' Actually true for wsb035, jwm010, wsb006, wsb023, jwm024 and jwm028
 reviewed_data$Analysis.was.entirely.code.based <- ifelse(
@@ -261,7 +266,7 @@ reviewed_data$Analysis.was.entirely.code.based <- ifelse(
   yes = "True",
   no = reviewed_data$Analysis.was.entirely.code.based)
 
-#' 4. Data was pre-processed
+#' ### 4. Data was pre-processed
 #' 
 #' True for wsb004 and wsb010, but raw data for jwm010, wsb006, jwm022
 #' 
@@ -278,7 +283,7 @@ reviewed_data$Was.the.data.pre.processed.or.shared.in.original.raw.format. <- if
     no = reviewed_data$Was.the.data.pre.processed.or.shared.in.original.raw.format.
   ))
 
-#' 5. Can code be run as is?
+#' ### 5. Can code be run as is?
 #' 
 #' Make sure this is "NA" for studies without code provided
 #' 
@@ -290,7 +295,7 @@ reviewed_data$Can.code.be.run.as.is..[reviewed_data$Study.ID..e.g...wsb002.or.jw
 #' reviewers, so they'll be averaged out in the next step
 #' 
 
-#' 6. Update whether open source formats were used
+#' ### 6. Update whether open source formats were used
 #' 
 #'  Studies jwm019, wsb006, wsb010, wsb014, jwm027 used open source formats
 #'  like csv, R, unmarked, etc.
@@ -302,26 +307,33 @@ proprietary <- c("wsb013", "wsb018", "jwm004")
 
 #' Update discrepancies
 #' 
-reviewed_data$Open.source.file.formats.used.[reviewed_data$Study.ID..e.g...wsb002.or.jwm040. %in% open] <- 
+reviewed_data$Open.source.file.formats.used.[
+  reviewed_data$Study.ID..e.g...wsb002.or.jwm040. %in% open] <- 
   "True"
-reviewed_data$Open.source.file.formats.used.[reviewed_data$Study.ID..e.g...wsb002.or.jwm040. %in% proprietary] <- 
+reviewed_data$Open.source.file.formats.used.[
+  reviewed_data$Study.ID..e.g...wsb002.or.jwm040. %in% proprietary] <- 
   "False"
 
 
-#' ### Average numerical results and simultaneously check for errors
+#' ## Average numerical results and simultaneously check for errors
 #' 
 #' New dataset for averaged data
-averages <- as.data.frame(matrix(NA, ncol = 6, nrow = length(study_names)))
-colnames(averages) <- c("studyID", "graphsReproduced", "numbersReproduced", "conclusionsReproduced", "codeRunsAsIs", "journal")
+averages <- 
+  as.data.frame(matrix(NA, ncol = 6, nrow = length(study_names)))
+colnames(averages) <- 
+  c("studyID", "graphsReproduced", "numbersReproduced", 
+    "conclusionsReproduced", "codeRunsAsIs", "journal")
 #' 
 for(ss in 1:length(study_names)){
-  subsetdata <- reviewed_data[reviewed_data$Study.ID..e.g...wsb002.or.jwm040.==study_names[ss],]
+  subsetdata <- 
+    reviewed_data[reviewed_data$Study.ID..e.g...wsb002.or.jwm040.==study_names[ss],]
   
   # Check for disagreements amongst answers
   if(length(unique(subsetdata[,"Data.readily.available."]))>=2){
     print(paste(study_names[ss], "error: data readily available"))
   }
-  if(length(unique(subsetdata[,"Was.the.data.pre.processed.or.shared.in.original.raw.format." ]))>=2){
+  if(length(unique(subsetdata[
+    ,"Was.the.data.pre.processed.or.shared.in.original.raw.format." ]))>=2){
     print(paste(study_names[ss], "error: was data pre processed"))
   }
   if(length(unique(subsetdata[,"Code.available" ]))>=2){
@@ -333,9 +345,10 @@ for(ss in 1:length(study_names)){
   
   # Average over numerical responses
   averages$studyID[ss] <- study_names[ss]
-  averages$graphsReproduced[ss] <- ifelse(study_names[ss] == "wsb018",
-                                          yes = NA,
-                                          no = mean(subsetdata$Were.the.study.s.figures.reproduced.., na.rm = T))
+  averages$graphsReproduced[ss] <- 
+    ifelse(study_names[ss] == "wsb018",
+           yes = NA,
+           no = mean(subsetdata$Were.the.study.s.figures.reproduced.., na.rm = T))
   averages$numbersReproduced[ss] <- 
     mean(subsetdata$Were.the.numbers.in.the.study.s.tables.and.or.results.text.quantitatively.reproduced..)
   averages$conclusionsReproduced[ss] <- 
