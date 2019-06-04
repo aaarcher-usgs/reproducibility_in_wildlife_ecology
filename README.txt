@@ -6,29 +6,76 @@ GENERAL INFORMATION
 -------------------
 
 
-1. R Code and Output Supporting: Computational reproducibility in The Wildlife Societyís flagship journals
+1. R Code and Output Supporting: Computational reproducibility in The Wildlife Society?s flagship journals
 
 2. Author Information
 
 
-  Principal Investigator Contact Information
-        Name: Althea A. ArchMiller
+Principal Investigator Contact Information
+  Name: Althea A. ArchMiller
            Institution: Department of Biology, Concordia College
            Address: Concordia College, MN
            Email: althea.archmiller [at] gmail.com
+
+Co-investigator Contact Information
+	Name: Andrew D. Johnson
+           Institution: Department of Biology, Concordia College
+           Address: Concordia College, MN
+           Email: ajohns76 [at] cord.edu
+           
+Co-investigator Contact Information
+	Name: Jane Nolan
+           Institution: Department of Biology, Concordia College
+           Address: Concordia College, MN
+           Email: jnolan1 [at] cord.edu
+
+Co-investigator Contact Information
+	Name: Margaret Edwards
+           Institution: Department of Fisheries, Wildlife, and Conservation Biology
+           Address: University of Minnesota-Twin Cities
+           Email: edwar486 [at] umn.edu
+           
+Co-investigator Contact Information
+	Name: Lisa H. Elliot
+           Institution: Department of Fisheries, Wildlife, and Conservation Biology
+           Address: University of Minnesota-Twin Cities
+           Email: harnx012 [at] umn.edu
+
+Co-investigator Contact Information
+	Name: Jake M. Ferguson
+           Institution: Department of Biology
+           Address: University of Hawai‚Äòi at MƒÅnoa
+           Email: jakeferg [at] hawaii.edu
+
+Co-investigator Contact Information
+	Name: Fabiola Iannarilli
+           Institution: Department of Fisheries, Wildlife, and Conservation Biology
+           Address: University of Minnesota-Twin Cities
+           Email: ianna014 [at] umn.edu
+
+Co-investigator Contact Information
+	Name: Juliana Velez
+           Institution: Department of Fisheries, Wildlife, and Conservation Biology
+           Address: University of Minnesota-Twin Cities
+           Email: velez063 [at] umn.edu
+
+Co-investigator Contact Information
+	Name: Kelsey Vitense
+           Institution: Department of Fisheries, Wildlife, and Conservation Biology
+           Address: University of Minnesota-Twin Cities
+           Email: viten003 [at] umn.edu
+
+Co-investigator Contact Information
+  Name: Douglas H. Johnson
+           Institution: US Geological Survey
+           Address: Northern Prairie Wildlife Research Center
+           Email: douglas_h_johnson [at] usgs.gov
 
 Co-investigator Contact Information
 	Name: John R. Fieberg
            Institution: Department of Fisheries, Wildlife, and Conservation Biology
            Address: University of Minnesota-Twin Cities
            Email: jfieberg [at] umn.edu
-
-Co-investigator Contact Information
-        Name: Douglas H. Johnson
-           Institution: US Geological Survey
-           Address: Northern Prairie Wildlife Research Center
-           Email: douglas_h_johnson [at] usgs.gov
-
 
 
 3. Date of data collection (single date, range, approximate date): 2018
@@ -54,7 +101,7 @@ Attribution-NonCommercial-ShareAlike 3.0 United States
 
 2. Links to publications that cite or use the data: 
 
-ArchMiller, Johnson, Nolan, Edwards, Elliot, Ferguson, Iannarilli, Velez, Vitense, Johnson and Fieberg. Computational reproducibility in The Wildlife Societyís flagship journals, in review for Journal of Wildlife Mangement.
+ArchMiller, Johnson, Nolan, Edwards, Elliot, Ferguson, Iannarilli, Velez, Vitense, Johnson and Fieberg. Computational reproducibility in The Wildlife Society?s flagship journals, in review for Journal of Wildlife Mangement.
 
 
 3. Links to other publicly accessible locations of the data: 
@@ -71,7 +118,7 @@ NA
 
 6. Recommended citation for the data:	
 
-ArchMiller, Johnson, Nolan, Edwards, Elliot, Ferguson, Iannarilli, Velez, Vitense, Johnson and Fieberg. R Code and Output Supporting: Computational reproducibility in The Wildlife Societyís flagship journals
+ArchMiller, Johnson, Nolan, Edwards, Elliot, Ferguson, Iannarilli, Velez, Vitense, Johnson and Fieberg. R Code and Output Supporting: Computational reproducibility in The Wildlife Society?s flagship journals
 
 
 ---------------------
@@ -84,7 +131,7 @@ DATA & FILE OVERVIEW
 
    A. google_form_data_raw.csv: 
 
-We used a Google form to create a de-identified dataset with reproducibility scores and additional information for each study (Table 1). We analyzed reproducibility in three ways: (1) whether the numbers cited in the tables and/or text matched our numbers, allowing for rounding error within the publicationís significant digits (i.e., Q12 in Table 1); (2) whether the original figures matched our reproduced figures, accounting for variation in the exact format of the figure (i.e., Q11 in Table 1); and (3) whether the conclusions cited by the original studyís authors were supported, regardless of whether specific numerical results matched or not (i.e., Q13 in Table 1). We ranked these criteria on a five-point scale with 5 being totally reproducible and 1 being completely unreproducible (Table 1). We focused on these three reproducibility criteria with the idea that even if specific effect sizes may have varied, the most important aspect of reproducibility would be to match the ultimate conclusions, which in TWS journals are often used to make management recommendations. To limit subjective bias in our reproducibility scoring, a second reviewer read through the reproducibility notes and scored the study. The overall reproducibility scores for each paper were the averages of the two reviewerís scores for questions 11, 12, and 13 (Table 1). 
+We used a Google form to create a de-identified dataset with reproducibility scores and additional information for each study. We analyzed reproducibility in three ways: (1) whether the numbers cited in the tables and/or text matched our numbers, allowing for rounding error within the publication's significant digits; (2) whether the original figures matched our reproduced figures, accounting for variation in the exact format of the figure; and (3) whether the conclusions cited by the original study's authors were supported, regardless of whether specific numerical results matched or not. We ranked these criteria on a five-point scale with 5 being totally reproducible and 1 being completely unreproducible (Table 1). We focused on these three reproducibility criteria with the idea that even if specific effect sizes may have varied, the most important aspect of reproducibility would be to match the ultimate conclusions, which in TWS journals are often used to make management recommendations. To limit subjective bias in our reproducibility scoring, a second reviewer read through the reproducibility notes and scored the study. The overall reproducibility scores for each paper were the averages of the two reviewer's scores. 
         
    B. 01_data_processing.html: 
 
@@ -128,7 +175,7 @@ METHODOLOGICAL INFORMATION
 
 1. Description of methods used for collection/generation of data: 
 
-For complete methodological details, please refer to ArchMiller et al., Computational reproducibility in The Wildlife Societyís flagship journals. In short, we attempted to computationally reproduce 80 published articles from The Journal of Wildlife Management and The Wildlife Society Bulletin. For each article, we filled out a Google Form survey with de-identified information, which became the dataset shared on this repository. The scripts then take that data and create the results and figures that we include in the manuscript. 
+For complete methodological details, please refer to ArchMiller et al., Computational reproducibility in The Wildlife Society's flagship journals. In short, we attempted to computationally reproduce 80 published articles from The Journal of Wildlife Management and The Wildlife Society Bulletin. For each article, we filled out a Google Form survey with de-identified information, which became the dataset shared on this repository. The scripts then take that data and create the results and figures that we include in the manuscript. 
 
 2. Methods for processing the data: 
 
@@ -175,7 +222,7 @@ DATA-SPECIFIC INFORMATION FOR: google_form_data_raw.csv
                 AAA = Althea ArchMiller
                 ADJ = Andrew Johnson
 		dhj = Doug Johnson
-		FI = Fabiola Ixx
+		FI = Fabiola Iannarilli
 		JF = John Fieberg
 		JJN = J. Jane Nolan
 		JMF = Jake Ferguson
@@ -194,66 +241,73 @@ DATA-SPECIFIC INFORMATION FOR: google_form_data_raw.csv
     E. Was this paper reviewed?
 	Answered whether or not this paper was reviewed. 
 		[blank] = Records that were entered before this question was included on the Google Form
+		False, author declined to participate (e.g., private data, no time, etc) = Not reviewed because author declined to participate
+		False, author never responded = Not reviewed because we couldn't get data or ahold of author
+		False, for other reasons not stated above = Not reviewed for other reasons than author declined or was unreachable
+		False, unsuitable for review = Not reviewed because paper was deemed unsuitable for review (see item D above)
+		True = Yes, study was reviewed for computational reproducibility
     
 
-    F. step
-	Step length (m) from previous location
-
+    F. Data readily available?
+	Answered whether data was readily available through supplemental information or online repositories.
+    False = No, data was not available
+    True = Yes, data was available
+    Not applicable = Not applicable because study was unsuitable for review
+    Unsure = Not sure, because secondary reviewer did not know where data came from
     
 
-    G. bearing
-	Bearing relative to true north
+    G. Was the data pre-processed or shared in original raw format?
+	Answered whether data were in raw format or pre-processed.
+    Not applicable = Not applicable because study was unsuitable for review
+    Pre-processed = Data was pre-processed before shared/archived
+    Raw format = Data was shared/archived in raw format with no pre-processing
+    Unsure = Not sure, because secondary reviewer did not know if data was pre-processed or raw
 
     
-   
-    H. presence
-	Binary indicator for each observed location (presence==1) and its associated available locations generated by the random movement paths (presence==0). 
-                    0 = Randomly generated available location
-                    1 = Observed location
+    H. Code available
+	Answered whether code was available along with data or not. Not applicable for data that was analyzed without code (e.g., JMP) 
+    Not applicable = Not applicable because data was not analyzed with code-based software
+    False = Code was unavailable
+    True = Code was available
 
-    
 
-    I. decid50
-	Percent cover of deciduous forest from 2011 NLCD (Jin et al. 2013).
-
-    
-
-    J. mixed50
-	Percent cover of mixed wood forest from 2011 NLCD (Jin et al. 2013).
-
-    
-
-    K. conif50
-	Percent cover of coniferous forest from 2011 NLCD (Jin et al. 2013).
-
-    
-
-    L. treedwet50
-	Percent cover of treed wetland from 2011 NLCD (Jin et al. 2013).
-
-    
-
-    M. year
-	Year for each data point 
+    I. Analysis was entirely code-based
+	Answered whether data were analyzed with code-based software (e.g., R or SAS) or not (e.g., JMP or SPSS).
+    Not applicable = Not applicable because study was unsuitable for review
+    False = Analysis was not entirely code-based
+    True = Analysis was entirely code-based
+    Unsure = Secondary reviewer was unsure of analysis approach
 	
+
+    J. Open source file formats used
+	Answered whether or not authors used open source file formats (e.g., csv, txt, R)
+	  Not applicable = Not applicable because study was unsuitable for review
+    False = No, authors used non-open source formats
+    True = Yes, authors used open source formats
+    Unsure = Secondary reviewer was unsure of file formats
+
+    
+
+    K. Can code be run as is?
+	Answered on a scale of 1 to 5 if code provided could be run as-is. Questions was unanswered for studies with code (blank values). The value of 1 was associated with code that could not be run as is and 5 was associated with code that could be run directly as provided.
+
+    
+
+    L. Were the study's figures reproduced?
+	Answered on a scale of 1-5 if figures were reproduced. One study had no figures to reproduce (blank values). The value of 1 was associated with 0% of figures reproduced and 5 was associated with 100% of figures being reproduced.
+
+    
+
+    M. Were the numbers in the study's tables and/or results text quantitatively reproduced? 
+	Answered on a scale of 1-5 if numbers were reproduced. The value of 1 was associated with 0% of numbers reproduced and 5 was associated with 100% of numbers being reproduced.
+	
+	
+	  N. Were the study's conclusions reproduced? 
+	Answered on a scale of 1-5 if conclusions were reproduced. The value of 1 was associated with 0% of conclusions reproduced and 5 was associated with 100% of conclusions being reproduced.
 
 -----------------------------------------
 References
 
-
-
-Boyce, MS, Vernier PR, Nielsen SE, and Schmiegelow, FK (2002) Evaluating resource selection functions. Ecological Modeling 157, 281-300.
-
-
-
-Jin, S, Yang L, Danielson, P, Homer C, Fry J, and Xian G (2013) A comprehensive change detection method for updating the national land cover database to circa 2011. Remote Sensing of Environment 132, 159-175.
-
-
-Johnson, CJ, Nielsen, SE, Merrill, EH, McDonald, TL, and Boyce MS (2006) Resource selection functions based on use-availability data: Theoretical motivation and evaluation methods. Journal of Wildlife Management 70, 347-357.
-
-
-
 R Core Team. (2015). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.
 
-Street, GM, Fieberg, J, Rodgers, AR, Carstensen, M, Moen, R, and Moore, SA, et al. (2016) Habitat functional response mitigates reduced foraging opportunity: Implications for animal fitness and space use. Landscape Ecology 1-15.
 -----------------------------------------
