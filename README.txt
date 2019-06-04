@@ -6,7 +6,7 @@ GENERAL INFORMATION
 -------------------
 
 
-1. R Code and Output Supporting: Computational reproducibility in The Wildlife Society?s flagship journals
+1. R Code and Output Supporting: Computational reproducibility in The Wildlife Society's flagship journals
 
 2. Author Information
 
