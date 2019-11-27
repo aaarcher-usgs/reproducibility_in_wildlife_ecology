@@ -145,7 +145,8 @@ ggplot(data = plottingdata.long, aes(x = Category, y = Score,
               color = "black")+
   #ylim(1,5)+
   theme_classic()+
-  theme(legend.position = "top", legend.title = element_blank())+
+  theme(legend.position = "top", legend.title = element_blank(),
+        legend.text = element_text(face = "italic"))+
   xlab("Reproducibility criterion")+
   ylab("Reproducibility score")
 
