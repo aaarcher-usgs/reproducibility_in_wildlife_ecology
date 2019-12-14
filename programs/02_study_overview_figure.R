@@ -15,6 +15,7 @@
 library(ezknitr)
 library(knitr)
 library(devtools)
+library(Hmisc)
 
 #' Clear environment and set seed
 #' 
@@ -57,6 +58,17 @@ hist(averages$conclusionsReproduced[averages$journal=="JWM"])
 #' By jounral: WSB
 sort(averages$conclusionsReproduced[averages$journal=="WSB"])
 hist(averages$conclusionsReproduced[averages$journal=="WSB"])
+
+#' ### 95% Confidence intervals with Wilson Score Intervals 
+#' 
+#' Non-reproducible number
+Hmisc::binconf(x = 6, n = 19, method = "wilson")
+
+#' Reproducible number
+Hmisc::binconf(x = 13, n = 19, method = "wilson")
+
+#' Number reviewed
+Hmisc::binconf(x = 19, n = 74, method = "wilson")
 
 #' _____________________________________________________________________________
 #' ## Footer
