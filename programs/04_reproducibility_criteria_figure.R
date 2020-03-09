@@ -406,7 +406,7 @@ plottingdata$n[30] <-
 #' 
 plottingdata$upper <- plottingdata$Score + plottingdata$SD
 plottingdata$lower <- plottingdata$Score - plottingdata$SD
-
+print(plottingdata)
 
 #' Compile raw data in long format
 #'
