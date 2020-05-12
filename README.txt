@@ -101,7 +101,7 @@ Attribution-NonCommercial-ShareAlike 3.0 United States
 
 2. Links to publications that cite or use the data: 
 
-ArchMiller, Johnson, Nolan, Edwards, Elliot, Ferguson, Iannarilli, Velez, Vitense, Johnson and Fieberg. Computational reproducibility in The Wildlife Society?s flagship journals, in review for Journal of Wildlife Mangement.
+Archmiller, A.A., Johnson, A.D., Nolan, J., Edwards, M., Elliott, L.H., Ferguson, J.M., Iannarilli, F., Vélez, J., Vitense, K., Johnson, D.H. and Fieberg, J. (2020), Computational Reproducibility in The Wildlife Society's Flagship Journals. Journal of Wildlife Management. doi:10.1002/jwmg.21855
 
 
 3. Links to other publicly accessible locations of the data: 
